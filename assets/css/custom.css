@@ -1,96 +1,98 @@
+/* ================================
+   Main Navigation
+   ================================ */
 /* Hide all submenus initially */
 .main-nav .submenu {
-	display: none;
-	position: absolute;
-	/* Position submenus relative to their parent */
-	background-color: #f9f9f9;
-	/* Background color for submenu */
-	list-style: none;
-	/* Remove bullets */
-	padding: 10px 0;
-	/* Padding around submenu items */
-	margin: 0;
-	/* Remove default margin */
-	border: 1px solid #ddd;
-	/* Optional: border for submenu */
+    display: none;
+    position: absolute;
+    background-color: #F9F9F9;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    border: 1px solid #ddd;
 }
-
 /* Show the submenu on hover of the parent menu item */
-.menu-item:hover>.submenu {
-	display: flex;
-	margin-top: 105px;
-	flex-direction: column;
-	flex-wrap: wrap;
+.menu-item:hover > .submenu {
+    display: flex;
+    margin-top: 105px;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
-
 /* Ensure the submenu aligns properly under the parent menu item */
 .menu-item {
-	position: relative;
-	/* Positioning context for the submenu */
+    position: relative;
 }
-
 /* Style submenu items */
 .submenu-item {
-	padding: 5px 20px;
-	/* Padding inside each submenu item */
-	white-space: nowrap;
-	/* Prevent submenu text from wrapping */
+    padding: 5px 20px;
+    white-space: nowrap;
 }
-
-/* Optional: Style submenu items on hover */
+/* Change background color of submenu items on hover */
 .submenu-item:hover {
-	background-color: #f0f0f0;
-	/* Background color change on hover */
-	cursor: pointer;
-	/* Cursor change on hover */
+    background-color: #F0F0F0;
+    cursor: pointer;
 }
-
+/* Utility class to hide elements */
 .d-none {
-	display: none !important;
+    display: none !important;
 }
-
+/* ================================
+   Welcome Section
+   ================================ */
+/* Container for the welcome section with background image */
 .welcome-container {
-	position: relative;
+    position: relative;
     padding-top: 80px;
     padding-bottom: 250px;
-    margin-bottom: 20px;
     background-image: url('../images/alf-pattern-image.jpg');
     background-position: 0%;
     background-repeat: no-repeat;
     background-size: cover;
 }
+/* Styling for the welcome text */
 .welcome-text {
-	color: #092f57;
-	text-align: center;
-	font-size: 8rem;
-	font-family: 'Apercu Pro',sans-serif;
-	font-weight: 600;
+    color: #092F57;
+    text-align: center;
+    font-size: 8rem;
+    font-family: 'Apercu Pro', sans-serif;
+    font-weight: 600;
     padding: 120px;
 }
+/* Arrow image inside the welcome container */
 .welcome-container a.arrow img {
-   width: 25px;
+    width: 25px;
 }
-
-/* logo css */
+/* Paragraph styling for dimension text */
+p.dimensions {
+    padding-top: 150px;
+    margin-bottom: 10px;
+}
+/* ================================
+   Header
+   ================================ */
+/* Styling for the logo in the header */
 header span.navbar-brand-inner img.img-fluid {
     height: 90px;
     width: 250px;
 }
-.dimensions{
-    padding-top:150px;
-    margin-bottom: 10px;
-}
+/* ================================
+   Media Queries
+   ================================ */
+/* CSS for large screens (width >= 992px) */
 @media screen and (min-width: 992px) {
-    /* Dimension section's text removed by AB */
+    /* Hide vslider menu link inside the banner */
     #banner .lqd-vslider-menu .lqd-webgl-slideshow-link {
         display: none;
     }
 }
+/* CSS for small devices (width <= 767px) */
 @media screen and (max-width: 767px) {
+    /* Adjust welcome text size and padding for small screens */
     .welcome-text {
         font-size: 4rem;
-        padding: 50px;
+        padding: 50px 40px;
     }
+    /* Adjust font size for dimension paragraph on small screens */
     p.dimensions {
         font-size: 13px;
     }

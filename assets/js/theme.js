@@ -1072,7 +1072,7 @@ jQuery(document).ready(function () {
     });
   };
 })(jQuery);
-jQuery(document).ready(function ($) {});
+jQuery(document).ready(function ($) { });
 (function ($) {
   'use strict';
 
@@ -2238,6 +2238,7 @@ jQuery(document).ready(function ($) {
         this.clientY = e.clientY;
       });
       gsap.ticker.add(() => {
+        // Code added by AB
         // Check if the hovered element or its parent has the "no-cursor" class
         const isExcluded = document.querySelector('.no-cursor:hover') !== null;
         if (isExcluded) {
@@ -2247,13 +2248,11 @@ jQuery(document).ready(function ($) {
           this.fadeOutInnerCursor = false;
           this.fadeOutOuterCursor = false;
         }
-    
         if (!this.initiated) {
           this.initiated = true;
           this.fadeOutInnerCursor = false;
           this.fadeOutInnerCursor = false;
         }
-    
         const dt = 1.0 - Math.pow(1.0 - 0.4, gsap.ticker.deltaRatio());
         pos.x += (this.clientX - pos.x) * dt;
         pos.y += (this.clientY - pos.y) * dt;
@@ -2261,12 +2260,10 @@ jQuery(document).ready(function ($) {
         this.innerQuickSetY(pos.y);
         this.extrasQuickToX(this.clientX);
         this.extrasQuickToY(this.clientY);
-    
         if (!this.isStuck && !this.isMagnetic) {
           this.outerQuickToX(this.clientX - this.outerCursorSize / 2);
           this.outerQuickToY(this.clientY - this.outerCursorSize / 2);
         }
-    
         if (this.isStuck && this.activeEl) {
           const rect = this.activeEl.getBoundingClientRect();
           let {
@@ -2280,19 +2277,16 @@ jQuery(document).ready(function ($) {
           this.outerQuickToX(left);
           this.outerQuickToY(top);
         }
-    
         if (this.isMagnetic) {
           this.outerQuickToX(this.magneticCords.x);
           this.outerQuickToY(this.magneticCords.y);
         }
-    
         if (this.scaleOuterCursor) {
           gsap.to(this.outerCursor, {
             scaleX: () => this.scaleOuterCursorX || 1,
             scaleY: () => this.scaleOuterCursorY || 1
           });
         }
-    
         if (this.fadeOutInnerCursor) {
           gsap.to(this.innerCursor, {
             opacity: 0
@@ -2302,7 +2296,6 @@ jQuery(document).ready(function ($) {
             opacity: 1
           });
         }
-    
         if (this.fadeOutOuterCursor) {
           gsap.to(this.outerCursor, {
             opacity: 0
@@ -2314,7 +2307,6 @@ jQuery(document).ready(function ($) {
         }
       });
     }
-    
     initHovers() {
       document.addEventListener('lqd-carousel-initialized', e => {
         const {
@@ -2685,11 +2677,7 @@ jQuery(document).ready(function ($) {
     });
   };
   addCustomCursorMarkup();
-  $('[data-lqd-cc]').each(function () {
-    if ($(this).closest('[data-disable-custom-cursor]').length === 0) {
-        $(this).liquidCustomCursor();
-    }
-});
+  $('[data-lqd-cc]').liquidCustomCursor();
 });
 (function ($) {
   'use strict';
@@ -5798,7 +5786,7 @@ jQuery(document).ready(function ($) {
           $(this.element).removeClass('items-moving');
         }
       });
-      if (dir == 'next') this.setActive(bottomItem, element);else if (dir == 'prev') this.setActive(topItem, element);
+      if (dir == 'next') this.setActive(bottomItem, element); else if (dir == 'prev') this.setActive(topItem, element);
       const newActiveItem = $('.is-active', element);
       const newBottomItem = $('.is-bottom', element);
       const newTopItem = $('.is-top', element);
@@ -6423,7 +6411,7 @@ jQuery(document).ready(function ($) {
       const counterVal = options.targetNumber;
       const formatWithCommas = /,+/.test(counterVal);
       const formatWithSpaces = /\s+/.test(counterVal);
-      if (formatWithCommas) counter.html(this.formatCounterAnimator(this.formatNumberWithCommas(counterVal)));else if (formatWithSpaces) counter.html(this.formatCounterAnimator(this.formatNumberWithSpaces(counterVal)));else counter.html(this.formatCounterAnimator(counterVal));
+      if (formatWithCommas) counter.html(this.formatCounterAnimator(this.formatNumberWithCommas(counterVal))); else if (formatWithSpaces) counter.html(this.formatCounterAnimator(this.formatNumberWithSpaces(counterVal))); else counter.html(this.formatCounterAnimator(counterVal));
       counter.find('.lqd-counter-animator').each(function (i, animator) {
         const $animator = $(animator);
         const animatorValue = $animator.find('.lqd-animator-value').text();
@@ -9511,13 +9499,13 @@ jQuery(document).ready(function ($) {
       }
       this.isAnimating = true;
       var defaults = {
-          duration: 0.5,
-          ease: 'power4.inOut',
-          delay: this.options.delay ? this.options.delay / 1000 : 0,
-          bgcolor: '#f0f0f0',
-          direction: 'lr',
-          coverArea: 0
-        },
+        duration: 0.5,
+        ease: 'power4.inOut',
+        delay: this.options.delay ? this.options.delay / 1000 : 0,
+        bgcolor: '#f0f0f0',
+        direction: 'lr',
+        coverArea: 0
+      },
         revealSettings = revealSettingsArg || this.options.revealSettings,
         direction = revealSettings.direction || defaults.direction,
         transformSettings = this._getTransformSettings(direction);
@@ -11465,11 +11453,11 @@ jQuery(document).ready(function ($) {
       this.camera.updateProjectionMatrix();
       this.renderer.setSize(this.viewport.width, this.viewport.height);
     }
-    onUpdate() {}
-    onMouseEnter(event) {}
-    onMouseLeave(event) {}
-    onMouseMove(event) {}
-    onMouseOver(index, event) {}
+    onUpdate() { }
+    onMouseEnter(event) { }
+    onMouseLeave(event) { }
+    onMouseMove(event) { }
+    onMouseOver(index, event) { }
     get viewport() {
       let width = this.container.clientWidth;
       let height = this.container.clientHeight;
@@ -11596,7 +11584,7 @@ jQuery(document).ready(function ($) {
         this.isMouseOver = true;
       }
     }
-    onMouseLeave(event) {}
+    onMouseLeave(event) { }
     onMouseMove(event) {
       let x = gsap.utils.mapRange(-1, 1, -this.viewSize.width / 4, this.viewSize.width / 4, this.mouse.x);
       let y = gsap.utils.mapRange(-1, 1, -this.viewSize.height / 4, this.viewSize.height / 4, this.mouse.y);

@@ -101,14 +101,11 @@ header span.navbar-brand-inner img.img-fluid {
 }
 
 /*style by AM */
-.alfaisal-home{
+.alfaisal-edu{
     position: absolute;
     padding:3px;
     z-index: 99;
-}
- 
-.alfaisal-home .btn{
-    padding:5px;
+    text-decoration: underline;
 }
 
 .more-btn{
@@ -119,7 +116,7 @@ header span.navbar-brand-inner img.img-fluid {
     border: none;
 }
 
-.t-white{
+.text-white{
 	color:white !important;
 }
 
@@ -130,7 +127,7 @@ header span.navbar-brand-inner img.img-fluid {
 	}
 }
 .theme-color{
-	color: #092f57;
+	color: #092f57 !important;
 }
 
 .f-weight-600{
@@ -138,6 +135,6 @@ header span.navbar-brand-inner img.img-fluid {
 }
 
 .text-45{
-    font-size: 45px;
+    font-size: 45px !important;
 }
 

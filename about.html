@@ -41,10 +41,10 @@
 
 		<div class="lqd-sticky-placeholder hidden"></div>
 		<!-- no-cursor class added, removed "sticky-header-noshadow and added "bg-white" by AB -->
-		<header id="site-header" class="no-cursor main-header bg-white" data-sticky-header="true"
-			data-sticky-values-measured="false" data-sticky-options='{"dynamicColors" :true}'>
-			<!-- "no-cursor", "lqd-hide-onstuck" classes removed by AB -->
-			<div class="lqd-head-sec-wrap relative pr-40 pl-125 lg:pl-0 lg:pr-0 md:hidden">
+        <header id="site-header" class="no-cursor main-header bg-white" data-sticky-header="true"
+            data-sticky-values-measured="false" data-sticky-options='{"dynamicColors" :true}'>
+            <!-- "no-cursor", "lqd-hide-onstuck" classes removed by AB -->
+            <div class="lqd-head-sec-wrap relative pr-40 pl-125 lg:pl-0 lg:pr-0 md:hidden">
 				<div class="lqd-head-sec w-full flex items-stretch justify-between">
 					<div class="col-auto lqd-head-col justify-start">
 						<div class="module-logo navbar-brand-plain py-45">
@@ -150,6 +150,10 @@
 											</ul>
 										</a>
 									</li>
+									<!--alfaisal home button by AM-->
+									<span class="alfaisal-home">
+										<a href="https://www.alfaisal.edu/en/" class="btn t-white bg-secondary">alfaisal-home</a>
+									</span>
 								</ul>
 							</div>
 						</div>
@@ -372,8 +376,8 @@
 								</a>
 							</li>
 							<a href="https://www.alfaisal.edu"
-								class="btn btn-solid btn-md font-bold text-1em text-white bg-secondary"
-								style="color: #fff">alfaisal.edu</a>
+								class="btn btn-solid btn-md font-bold text-1em t-white bg-secondary"
+								>alfaisal.edu</a>
 						</ul>
 
 					</div>
@@ -389,11 +393,13 @@
 				<section class="lqd-section about-us pt-90 pb-50" data-section-luminosity="light">
 					<div class="container">
 						<div class="row items-center">
-							<div class="col col-12 col-md-8" data-custom-animations="true"
+							<!-- Changed class col-md-8 to col-md-12 to increase the width by AM-->
+							<div class="col col-12 col-md-12" data-custom-animations="true"
 								data-ca-options='{"triggerHandler":"inview","animationTarget":"all-childs","duration":"1600","delay":"12","ease":"power4.out","direction":"forward","initValues":{"rotationX":75,"rotationY":10,"rotationZ":10,"transformOriginX":50,"transformOriginY":0,"opacity":0},"animations":{"rotationX":0,"rotationY":0,"rotationZ":0,"transformOriginX":50,"transformOriginY":50,"transformOriginZ":"0px","opacity":1}}'>
 								<div class="ld-fancy-heading">
-									<h1 class="ld-fh-element mb-0/75em text-50 -tracking-0/5">Who we are</h1>
+									<h1 class="ld-fh-element mb-0/75em text-50 -tracking-0/5 theme-color">Who we are</h1>
 								</div>
+
 								<h6 class="ld-fh-element lqd-split-lines mb-1/5em text-10 uppercase font-semibold tracking-0/1em text-black"
 									data-split-text="true" data-split-options='{"type":"lines"}'> About Us</h6>
 								<h2 class="ld-fh-element lqd-split-chars mb-0 text-26 font-medium leading-1/1em"
@@ -403,7 +409,8 @@
 									businesses. The name “Dimensions” captures the vast opportunities available for
 									anyone looking to make a mark and see the world in new ways.</h2>
 							</div>
-							<div class="col col-12 col-md-3 offset-md-1" data-custom-animations="true"
+							<!-- Class d-none added to hide this div by AM-->
+							<div class="col d-none col-12 col-md-3 offset-md-1" data-custom-animations="true"
 								data-ca-options='{"triggerHandler":"inview","animationTarget":"all-childs","duration":"1600","startDelay":"650","delay":"160","ease":"power4.out","direction":"forward","initValues":{"y":30,"scaleY":1.1,"rotationX":21,"rotationZ":3,"transformOriginX":0,"transformOriginY":50,"transformOriginZ":"0px","opacity":0},"animations":{"y":0,"scaleY":1,"rotationX":0,"rotationZ":0,"transformOriginX":50,"transformOriginY":50,"transformOriginZ":"0px","opacity":1}}'>
 								<div
 									class="lqd-fancy-menu lqd-custom-menu menu-items-has-border lqd-menu-td-none relative">
@@ -480,7 +487,8 @@
 								<div class="module-title w-full relative flex flex-col items-start mb-65"
 									data-custom-animations="true">
 									<div class="ld-fancy-heading" id="at">
-										<h1 class="ld-fh-element mb-0/75em text-50 -tracking-0/5" style="color: orange">
+										<!-- Changed title color orange to #092f57 by AM-->
+										<h1 class="ld-fh-element mb-0/75em text-50 -tracking-0/5 theme-color">
 											About us</h1>
 									</div>
 									<h2 class="ld-fh-element lqd-split-chars mb-0 text-22 font-medium leading-1/7em"
@@ -495,11 +503,13 @@
 										data-split-text="true" data-split-options='{"type":"chars, words"}'>Dimensions
 										is where creativity meets reality. We take cool, new ideas and turn them into
 										real products and services.</h2><br><br>
+										<!-- Replace strong tag with p tag by AM-->
 									<h2 class="ld-fh-element lqd-split-chars mb-0 text-22 font-medium leading-1/7em"
-										data-split-text="true" data-split-options='{"type":"chars, words"}'><strong>Here
+										data-split-text="true" data-split-options='{"type":"chars, words"}'><P>Here
 											at Dimensions, we do more than think up ideas—we turn them into real
 											opportunities, developing products, services, and startups ready to make an
-											impact.</strong></h2>
+											impact.</P>
+									</h2>
 								</div>
 							</div>
 						</div>
@@ -514,7 +524,8 @@
 						<div class="row">
 							<div class="col col-12">
 								<div class="ld-fancy-heading">
-									<h1 class="ld-fh-element mb-0/75em text-50 -tracking-0/5" style="color:brown">
+									<!-- Changed color brown to #092f57 by AM-->
+									<h1 class="ld-fh-element mb-0/75em text-50 -tracking-0/5 theme-color" >
 										Mission & Vision - Our Guiding Principles</h1>
 								</div>
 								<div class="lqd-tabs lqd-tabs-style-3 mb-30" data-tabs-options='{"trigger": "click"}'>
@@ -614,7 +625,8 @@
 						<div class="row">
 							<div class="col col-12 col-md-12">
 								<div class="ld-fancy-heading">
-									<h1 class="ld-fh-element mb-0/75em text-50 -tracking-0/5" style="color: orchid">Our
+									<!-- Changed color orchid to #092f57 by AM-->
+									<h1 class="ld-fh-element mb-0/75em text-50 -tracking-0/5 theme-color">Our
 										Focus Domain</h1>
 								</div>
 								<div class="ld-fancy-heading">
@@ -706,7 +718,8 @@
 						<div class="row">
 							<div class="col col-12">
 								<div class="ld-fancy-heading">
-									<h1 class="ld-fh-element mb-0/75em text-50 -tracking-0/5" style="color: crimson">Our
+									<!-- Changed color crimson to #092f57 by AM-->
+									<h1 class="ld-fh-element mb-0/75em text-50 -tracking-0/5 theme-color" >Our
 										Team</h1>
 								</div>
 								<div class="lqd-tabs lqd-tabs-style-3 mb-30" data-tabs-options='{"trigger": "click"}'>

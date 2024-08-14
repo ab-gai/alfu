@@ -1,118 +1,134 @@
-/* ================================
-   Main Navigation
-   ================================ */
-
 /* Hide all submenus initially */
 .main-nav .submenu {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    list-style: none;
-    padding: 10px 0;
-    margin: 0;
-    border: 1px solid #ddd;
+	display: none;
+	position: absolute;
+	/* Position submenus relative to their parent */
+	background-color: #f9f9f9;
+	/* Background color for submenu */
+	list-style: none;
+	/* Remove bullets */
+	padding: 10px 0;
+	/* Padding around submenu items */
+	margin: 0;
+	/* Remove default margin */
+	border: 1px solid #ddd;
+	/* Optional: border for submenu */
 }
 
 /* Show the submenu on hover of the parent menu item */
-.menu-item:hover > .submenu {
-    display: flex;
-    margin-top: 105px;
-    flex-direction: column;
-    flex-wrap: wrap;
+.menu-item:hover>.submenu {
+	display: flex;
+	margin-top: 105px;
+	flex-direction: column;
+	flex-wrap: wrap;
 }
 
 /* Ensure the submenu aligns properly under the parent menu item */
 .menu-item {
-    position: relative;
+	position: relative;
+	/* Positioning context for the submenu */
 }
 
 /* Style submenu items */
 .submenu-item {
-    padding: 5px 20px;
-    white-space: nowrap;
+	padding: 5px 20px;
+	/* Padding inside each submenu item */
+	white-space: nowrap;
+	/* Prevent submenu text from wrapping */
 }
 
-/* Change background color of submenu items on hover */
+/* Optional: Style submenu items on hover */
 .submenu-item:hover {
-    background-color: #f0f0f0;
-    cursor: pointer;
+	background-color: #f0f0f0;
+	/* Background color change on hover */
+	cursor: pointer;
+	/* Cursor change on hover */
 }
 
-/* Utility class to hide elements */
 .d-none {
-    display: none !important;
+	display: none !important;
 }
 
-/* ================================
-   Welcome Section
-   ================================ */
-
-/* Container for the welcome section with background image */
 .welcome-container {
-    position: relative;
+	position: relative;
     padding-top: 80px;
     padding-bottom: 250px;
+    margin-bottom: 20px;
     background-image: url('../images/alf-pattern-image.jpg');
     background-position: 0%;
     background-repeat: no-repeat;
     background-size: cover;
 }
-
-/* Styling for the welcome text */
 .welcome-text {
-    color: #092f57;
-    text-align: center;
-    font-size: 8rem;
-    font-family: 'Apercu Pro', sans-serif;
-    font-weight: 600;
+	color: #092f57;
+	text-align: center;
+	font-size: 8rem;
+	font-family: 'Apercu Pro',sans-serif;
+	font-weight: 600;
     padding: 120px;
 }
-
-/* Arrow image inside the welcome container */
 .welcome-container a.arrow img {
-    width: 25px;
+   width: 25px;
 }
 
-/* Paragraph styling for dimension text */
-p.dimensions {
-    padding-top: 150px;
-    margin-bottom: 10px;
-}
-
-/* ================================
-   Header
-   ================================ */
-
-/* Styling for the logo in the header */
+/* logo css */
 header span.navbar-brand-inner img.img-fluid {
     height: 90px;
     width: 250px;
 }
-
-/* ================================
-   Media Queries
-   ================================ */
-
-/* CSS for large screens (width >= 992px) */
+.dimensions{
+    padding-top:150px;
+    margin-bottom: 10px;
+}
 @media screen and (min-width: 992px) {
-
-    /* Hide vslider menu link inside the banner */
+    /* Dimension section's text removed by AB */
     #banner .lqd-vslider-menu .lqd-webgl-slideshow-link {
         display: none;
     }
 }
-
-/* CSS for small devices (width <= 767px) */
 @media screen and (max-width: 767px) {
-
-    /* Adjust welcome text size and padding for small screens */
     .welcome-text {
         font-size: 4rem;
-        padding: 50px 40px;
+        padding: 50px;
     }
-
-    /* Adjust font size for dimension paragraph on small screens */
     p.dimensions {
         font-size: 13px;
     }
+}
+
+/*style by AM */
+.alfaisal-home{
+    position: absolute;
+    padding:3px;
+    z-index: 99;
+}
+ 
+.alfaisal-home .btn{
+    padding:5px;
+}
+
+.more-btn{
+    text-align: end;
+}
+
+.more-btn .btn{
+    border: none;
+}
+
+.t-white{
+	color:white !important;
+}
+
+/* Header Enroll cropping issue fixed by AM*/
+@media screen and (min-width: 1200px) and (max-width: 1500px){
+	.main-nav>li>a{
+		padding: 10px 5px !important;
+	}
+}
+.theme-color{
+	color: #092f57;
+}
+
+.f-weight-600{
+	font-weight: 600;
 }

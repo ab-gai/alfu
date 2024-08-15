@@ -101,6 +101,14 @@ header span.navbar-brand-inner img.img-fluid {
 }
 
 /*style by AM */
+
+.text-white{
+	color:white !important;
+}
+.theme-color{
+	color: #092f57 !important;
+}
+
 .alfaisal-edu{
     position: absolute;
     padding:3px;
@@ -116,20 +124,6 @@ header span.navbar-brand-inner img.img-fluid {
     border: none;
 }
 
-.text-white{
-	color:white !important;
-}
-
-/* Header Enroll cropping issue fixed by AM*/
-@media screen and (min-width: 1200px) and (max-width: 1500px){
-	.main-nav>li>a{
-		padding: 10px 5px !important;
-	}
-}
-.theme-color{
-	color: #092f57 !important;
-}
-
 .f-weight-600{
 	font-weight: 600;
 }
@@ -138,3 +132,93 @@ header span.navbar-brand-inner img.img-fluid {
     font-size: 45px !important;
 }
 
+/* To fix Header Enroll cropping issue by AM*/
+@media screen and (min-width: 1200px) and (max-width: 1500px){
+	.main-nav>li>a{
+		padding: 10px 5px !important;
+	}
+}
+
+/* Media queries for devices with a max-width of 768px */
+@media screen and (max-width: 768px) {
+    /* Ensure tab navigation doesn't wrap */
+    .lqd-tabs-style-3 .lqd-tabs-nav {
+        flex-wrap: nowrap !important;
+    }
+
+    /* Center content within the specified container */
+    .contents {
+        text-align: center;
+    }
+
+    /* Adjust alignment for .text-start class */
+    .text-start {
+        align-items: center;
+    }
+
+    /* Reduce font size for h5 inside a specific span structure */
+    span.contents.flex.flex-col.relative.z-2 h5 {
+        font-size: 20px;
+    }
+
+    /* Reduce h1 font size on mobile devices */
+    h2.text-45 {
+        font-size: 40px !important;
+    }
+
+    /* Adjust width for .md\:w-40percent class */
+    /* .md\:w-40percent { */
+    .carousel-image .carousel-item{
+        width: 66%;
+    }
+    .text-65 {
+        font-size: 55px;
+    }
+    /*At Dimension font size fixed for mobile*/
+    .lqd-vslider-ext h2 {
+        font-size: 70px !important;
+    }
+}
+
+/* Media queries for devices with a max-width of 480px */
+@media screen and (max-width: 480px) {
+    /* Further reduce font size for h5 */
+    span.contents.flex.flex-col.relative.z-2 h5 {
+        font-size: 15px;
+    }
+
+    /* Further reduce h1 font size */
+    h2.text-45 {
+        font-size: 34px !important;
+    }
+
+    /* Reduce font size for h2 */
+    h2.text-22 {
+        font-size: 18px;
+    }
+
+    /* Adjust paragraph font sizes */
+    p.text-22 {
+        font-size: 18px;
+    }
+
+    p.text-24 {
+        font-size: 20px;
+    }
+
+    /* Adjust width for .md\:w-40percent class */
+    /* .md\:w-40percent { */
+    .carousel-image .carousel-item{
+        width: 80%;
+    }
+
+    /* Further reduce large text */
+    .text-65 {
+        font-size: 45px;
+    }
+
+    /*At Dimension font size fixed for mobile*/
+    .lqd-vslider-ext h2 {
+        font-size: 58px !important;
+    }
+}

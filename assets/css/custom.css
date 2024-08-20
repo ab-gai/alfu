@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 /* ================================
    Main Navigation
    ================================ */
@@ -20,9 +24,28 @@
     flex-wrap: wrap;
     right: 0;
 }
+
+.menu-item:not(:first-child) > a::after {
+    content: "";
+    display: inline-block;
+    margin-left: 6px;
+    width: 12px;
+    height: 12px;
+    background-image: url('../images/arrow-down-sign-to-navigate.png'); /* path to down arrow image */
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease;
+}
+
+.menu-item:not(:first-child):hover > a::after {
+    transform: rotate(180deg); /* rotate arrow 180 degrees on hover */
+}
+
 /* Ensure the submenu aligns properly under the parent menu item */
 .menu-item {
     position: relative;
+    justify-content: center;
+    flex-direction: row !important;
 }
 /* Style submenu items */
 .submenu-item {
@@ -77,6 +100,20 @@ header span.navbar-brand-inner img.img-fluid {
     height: 90px;
     width: 250px;
 }
+
+ul.main-nav > li.menu-item > a {
+    padding: 20px;
+}
+
+.right-scroller {
+    width: 70px;
+}
+
+/* Banner section on Homepage */
+#banner {
+    scroll-margin-top: 180px;
+}
+
 /* ================================
    Media Queries
    ================================ */
@@ -85,6 +122,14 @@ header span.navbar-brand-inner img.img-fluid {
     /* Hide vslider menu link inside the banner */
     #banner .lqd-vslider-menu .lqd-webgl-slideshow-link {
         display: none;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1500px){
+    .menu-item:not(:first-child) > a::after {
+        margin-left: 3px;
+        width: 6px;
+        height: 6px;
     }
 }
 /* CSS for small devices (width <= 767px) */
@@ -133,9 +178,9 @@ header span.navbar-brand-inner img.img-fluid {
 }
 
 /* To fix Header Enroll cropping issue by AM*/
-@media screen and (min-width: 1200px) and (max-width: 1500px){
+@media screen and (min-width: 992px) and (max-width: 1500px){
 	.main-nav>li>a{
-		padding: 10px 5px !important;
+		padding: 0px 15px !important;
 	}
 }
 

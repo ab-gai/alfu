@@ -123,6 +123,16 @@ ul.main-nav > li.menu-item > a {
     #banner .lqd-vslider-menu .lqd-webgl-slideshow-link {
         display: none;
     }
+
+    /* Footer Carousel */
+    body.page-about section.lqd-section.carousel-image {
+        margin-top: -11%;
+        bottom: -210px;
+    }
+
+    body.page-about footer.main-footer .module-top {
+        padding-top: 3% !important;
+    }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1500px){
